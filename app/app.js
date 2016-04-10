@@ -5,7 +5,7 @@ var app = angular.module('timetracker', [
 app.config( function ($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl : 'app/controller/timetrack.html',
+            templateUrl : 'app/time-track/timetrack.html',
             controller  : 'TimeTrackCtrl as vm'
         });
 })
