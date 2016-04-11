@@ -1,9 +1,13 @@
 {{::vm.title}}
-<select ng-model="vm.selectedUser" >
+<select ng-model="vm.selectedUser" ng-change="vm.getLogsbyUser(vm.selectedUser)">
     <option ng-repeat="user in vm.users" value="{{user.Userid}}">{{user.Name}}</option>
 </select>
-<button ng-click="vm.getLogsbyUser(vm.selectedUser)">View</button>
+<br />
+<br />
+<!-- <button ng-click="vm.getLogsbyUser(vm.selectedUser)">View</button> -->
 
-<div ng-repeat="time in vm.checkTime | orderBy: '-'">
-    <time>{{ time | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}</time>
+<div ng-repeat="time in vm.checkTime | orderBy: '-' | limitTo: vm.limit">
+    <p>{{ time | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}</p>
 </div>
+
+<button ng-click="vm.loadMore()">Load More</button>

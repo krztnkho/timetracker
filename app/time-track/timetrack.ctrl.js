@@ -3,6 +3,12 @@
     function TimeTrackCtrl( AttlogsService ) {
         var vm = this;
 
+        vm.limit = 10;
+
+        this.loadMore = function () {
+            this.limit += 10;
+        }
+
         this.getLogsbyUser = function( id ) {
             AttlogsService.getLogsByUser( id )
                 .then( function (response) {
