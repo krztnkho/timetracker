@@ -16,7 +16,10 @@
                         x.Checktime = moment().format(x.Checktime);
                         return x.Checktime;
                     } )
-                    // this.checkTime.pop();
+                    let lastItem = vm.checkTime[vm.checkTime.length -1].split('-');
+                    if (lastItem[0] === '2103') {
+                        vm.checkTime.pop();
+                    }
                 }, response => {
                     // error
                     console.log( response )
