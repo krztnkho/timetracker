@@ -1,4 +1,8 @@
 {{::vm.title}}
+<select ng-model="vm.selectedUser" >
+    <option ng-repeat="user in vm.users" value="{{user.Userid}}">{{user.Name}}</option>
+</select>
+<button ng-click="vm.getLogsbyUser(vm.selectedUser)">View</button>
 
 <div ng-repeat="time in vm.checkTime | orderBy: '-'">
     <time>{{ time | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}</time>
