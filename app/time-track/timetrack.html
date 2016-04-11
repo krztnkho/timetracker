@@ -1,1 +1,5 @@
 {{::vm.title}}
+
+<ul ng-repeat="time in vm.checkTime | orderBy: '-'">
+    <li>{{time}}</li>
+</ul>
