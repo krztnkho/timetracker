@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel app -d build",
+    "sass" : "sass --watch app/scss:app/styles",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
