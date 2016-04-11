@@ -1,19 +1,14 @@
 ( function () {
 
     function AttlogsService( $http ) {
-        var AttlogsService = {};
 
-        AttlogsService.someValue = 'sex';
-
-        AttlogsService.getLogsByUser = function( id ) {
-            $http.get('http://10.1.2.42:8080/attlogs/' + id)
-            .then( function success( response ) {
-                console.log( response );
-            }, function error( response ) {
-                console.log ( response )
-            });
+        var _getLogsByUser = function( id ) {
+            return $http.get('http://10.1.2.42:8080/attlogs/' + id);
         };
-        return AttlogsService;
+
+        return {
+            getLogsByUser : _getLogsByUser
+        }
     }
     angular
     .module('timetracker')

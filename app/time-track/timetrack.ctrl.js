@@ -5,7 +5,12 @@
 
         vm.title = "test";
 
-        console.log( AttlogsService.getLogsByUser( 14011 ))
+        AttlogsService.getLogsByUser( 14011 )
+            .then( function success( response ) {
+                console.log( response);
+            }, function error( response ) {
+                console.log ( response )
+            });
     }
 
     angular
