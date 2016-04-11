@@ -1,5 +1,6 @@
 var app = angular.module('timetracker', [
-'ngRoute'
+'ngRoute',
+'angularMoment'
 ]);
 
 app.config( ($routeProvider) => {
