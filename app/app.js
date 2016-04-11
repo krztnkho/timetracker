@@ -2,7 +2,7 @@ var app = angular.module('timetracker', [
 'ngRoute'
 ]);
 
-app.config( function ($routeProvider) {
+app.config( ($routeProvider) => {
     $routeProvider
         .when('/', {
             templateUrl : 'app/time-track/timetrack.html',
