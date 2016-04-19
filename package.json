@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel app -d build",
     "sass" : "sass --watch app/scss:app/styles",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server" : "python -m SimpleHTTPServer 3000"
   },
   "author": "",
   "license": "ISC",

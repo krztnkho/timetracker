@@ -16,6 +16,7 @@
                         x.Checktime = moment().format(x.Checktime);
                         return x.Checktime;
                     } )
+                    // for fucked up data
                     let lastItem = vm.checkTime[vm.checkTime.length -1].split('-');
                     if (lastItem[0] === '2103') {
                         vm.checkTime.pop();
